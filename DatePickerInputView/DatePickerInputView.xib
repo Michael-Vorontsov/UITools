@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" id="tst-Hc-M23" customClass="DatePickerInputView" customModule="LebaraWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6U-pE-man">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yrH-ic-Lrw"/>
+                        <barButtonItem title="OK" id="hYZ-xC-9V7">
+                            <connections>
+                                <action selector="doneTouched:" destination="tst-Hc-M23" id="72V-Ci-3PL"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TC9-oF-19u">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <date key="date" timeIntervalSinceReferenceDate="487281093.29486501">
+                        <!--2016-06-10 19:51:33 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="dateChanged:" destination="tst-Hc-M23" eventType="valueChanged" id="oMs-cF-BZm"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="J6U-pE-man" firstAttribute="top" secondItem="tst-Hc-M23" secondAttribute="top" id="4fN-ud-rVo"/>
+                <constraint firstItem="TC9-oF-19u" firstAttribute="top" secondItem="tst-Hc-M23" secondAttribute="top" id="JbK-bo-RyN"/>
+                <constraint firstAttribute="bottom" secondItem="TC9-oF-19u" secondAttribute="bottom" id="PSn-1e-22c"/>
+                <constraint firstItem="J6U-pE-man" firstAttribute="leading" secondItem="tst-Hc-M23" secondAttribute="leading" id="Xch-MU-h0Z"/>
+                <constraint firstAttribute="trailing" secondItem="J6U-pE-man" secondAttribute="trailing" id="oGG-mQ-akX"/>
+                <constraint firstItem="TC9-oF-19u" firstAttribute="top" secondItem="J6U-pE-man" secondAttribute="bottom" id="pi8-HG-Oqi"/>
+                <constraint firstItem="TC9-oF-19u" firstAttribute="leading" secondItem="tst-Hc-M23" secondAttribute="leading" id="vTA-YX-ckp"/>
+                <constraint firstAttribute="trailing" secondItem="TC9-oF-19u" secondAttribute="trailing" id="yVY-mV-ewP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JbK-bo-RyN"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="datePicker" destination="TC9-oF-19u" id="4qR-b0-R4h"/>
+                <outlet property="doneButton" destination="hYZ-xC-9V7" id="etm-bq-8vN"/>
+                <outlet property="toolBar" destination="J6U-pE-man" id="UQl-KH-hek"/>
+            </connections>
+            <point key="canvasLocation" x="294" y="-142"/>
+        </view>
+    </objects>
+</document>
